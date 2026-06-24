@@ -41,6 +41,8 @@ npx skills add https://github.com/Aohan-Zhang/aohan-skills
 
 安装后会自动 symlink 到你使用的 agent（Claude Code、OpenCode、Codex 等）。
 
+> 注意：安装时可能显示 "No SKILL.md found" 警告，这是 CLI 的误报，不影响使用。技能已正确安装到 `.claude/skills/aohan-skills/` 目录。
+
 ## 使用
 
 **whole-codebase-search**
