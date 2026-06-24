@@ -36,9 +36,10 @@ RAL = Review → Attack → Refine，多轮迭代审查：
 ## 安装
 
 ```bash
-npx skills add Aohan-Zhang/aohan-skills --skill whole-codebase-search
-npx skills add Aohan-Zhang/aohan-skills --skill ral-review
+npx skills add https://github.com/Aohan-Zhang/aohan-skills
 ```
+
+安装后会自动 symlink 到你使用的 agent（Claude Code、OpenCode、Codex 等）。
 
 ## 使用
 
