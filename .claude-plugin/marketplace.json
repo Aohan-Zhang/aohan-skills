@@ -1,0 +1,20 @@
+{
+  "name": "aohan-skills-marketplace",
+  "description": "Aohan Zhang 维护的个人 AI coding agent skill 市场",
+  "owner": {
+    "name": "Aohan Zhang"
+  },
+  "plugins": [
+    {
+      "name": "aohan-skills",
+      "source": "./",
+      "description": "个人 AI coding agent skill 集合",
+      "version": "1.0.0",
+      "license": "MIT",
+      "author": {
+        "name": "Aohan Zhang"
+      },
+      "repository": "https://github.com/Aohan-Zhang/aohan-skills"
+    }
+  ]
+}

@@ -1,5 +1,18 @@
 {
   "name": "aohan-skills",
+  "description": "个人 AI coding agent skill 集合",
+  "version": "1.0.0",
+  "license": "MIT",
+  "author": {
+    "name": "Aohan Zhang"
+  },
+  "repository": "https://github.com/Aohan-Zhang/aohan-skills",
+  "keywords": [
+    "ai-agent",
+    "skills",
+    "code-search",
+    "design-review"
+  ],
   "skills": [
     "./skills/ral-review",
     "./skills/whole-codebase-search"

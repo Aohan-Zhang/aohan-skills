@@ -35,13 +35,48 @@ RAL = Review → Attack → Refine，多轮迭代审查：
 
 ## 安装
 
+### 方式一：通过 `npx skills` 安装（OpenCode / Codex / Cursor 等）
+
+> 注意：旧版 `npx skills`（≤0.1.0）只识别仓库根目录的 `SKILL.md`，无法扫描 `skills/<name>/SKILL.md` 结构，会报 “No SKILL.md found”。请使用最新版：
+
 ```bash
-npx skills add https://github.com/Aohan-Zhang/aohan-skills
+# 列出仓库里的所有 skill
+npx skills@latest add https://github.com/Aohan-Zhang/aohan-skills --list
+
+# 安装全部 skill
+npx skills@latest add https://github.com/Aohan-Zhang/aohan-skills --skill '*' -y
+
+# 或安装单个 skill
+npx skills@latest add https://github.com/Aohan-Zhang/aohan-skills --skill whole-codebase-search
+npx skills@latest add https://github.com/Aohan-Zhang/aohan-skills --skill ral-review
 ```
 
-安装后会自动 symlink 到你使用的 agent（Claude Code、OpenCode、Codex 等）。
+可用 `-a <agent>` 指定目标 agent，例如：
 
-> 注意：安装时可能显示 "No SKILL.md found" 警告，这是 CLI 的误报，不影响使用。技能已正确安装到 `.claude/skills/aohan-skills/` 目录。
+```bash
+npx skills@latest add https://github.com/Aohan-Zhang/aohan-skills --skill '*' -a opencode -y
+```
+
+### 方式二：通过 Claude Code Plugin / Marketplace 安装
+
+仓库已包含 `.claude-plugin/plugin.json` 与 `marketplace.json`，可直接作为 Claude Code plugin 使用。
+
+```bash
+# 添加 marketplace
+claude plugin marketplace add Aohan-Zhang/aohan-skills
+
+# 安装插件
+claude plugin install aohan-skills@aohan-skills-marketplace
+```
+
+或在 Claude Code 交互式会话中：
+
+```
+/plugin marketplace add Aohan-Zhang/aohan-skills
+/plugin install aohan-skills@aohan-skills-marketplace
+```
+
+安装后 skill 会以插件命名空间形式加载，例如 `aohan-skills:whole-codebase-search`。
 
 ## 使用
 
@@ -79,6 +114,9 @@ npx skills add https://github.com/Aohan-Zhang/aohan-skills
 
 ```
 aohan-skills/
+├── .claude-plugin/
+│   ├── plugin.json          # Claude Code plugin 单插件描述
+│   └── marketplace.json     # Claude Code marketplace 目录
 ├── skills/
 │   ├── whole-codebase-search/
 │   │   └── SKILL.md
