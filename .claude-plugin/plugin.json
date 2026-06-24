@@ -1,0 +1,7 @@
+{
+  "name": "aohan-skills",
+  "skills": [
+    "./skills/ral-review",
+    "./skills/whole-codebase-search"
+  ]
+}
