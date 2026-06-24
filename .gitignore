@@ -2,3 +2,31 @@
 *.log
 .env
 .idea/
+
+# macOS / OS metadata
+.AppleDouble
+.LSOverride
+
+# Editor / IDE
+.vscode/
+*.swp
+*.swo
+*~
+
+# Node / package manager
+node_modules/
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Agent runtime artifacts
+.claude/skills/
+.agents/skills/
+.opencode/skills/
+
+# Local-only working dirs
+tmp/
+temp/
+dist/
+build/
+coverage/
