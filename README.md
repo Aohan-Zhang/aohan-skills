@@ -19,8 +19,8 @@
 ## 安装
 
 ```bash
-npx skills add aohan/aohan-skills/plugins/coding
-npx skills add aohan/aohan-skills/plugins/workflow
+npx skills add https://github.com/aohan/aohan-skills/plugins/coding
+npx skills add https://github.com/aohan/aohan-skills/plugins/workflow
 ```
 
 **Claude Code 插件方式**
