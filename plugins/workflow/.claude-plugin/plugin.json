@@ -1,9 +1,0 @@
-{
-  "name": "workflow",
-  "description": "工程效率 skill 集合:git 提交规范、部署、任务管理等自动化。",
-  "version": "0.1.0",
-  "author": {
-    "name": "aohan"
-  },
-  "license": "MIT"
-}

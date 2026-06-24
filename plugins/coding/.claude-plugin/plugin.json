@@ -1,9 +1,0 @@
-{
-  "name": "coding",
-  "description": "编码开发辅助 skill 集合:代码评审、重构、TDD、调试等。",
-  "version": "0.1.0",
-  "author": {
-    "name": "aohan"
-  },
-  "license": "MIT"
-}
