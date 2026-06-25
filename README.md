@@ -33,6 +33,14 @@ RAL = Review → Attack → Refine，多轮迭代审查：
 
 适用于：PRD 审核、架构文档审查、API 设计评审、任何需要高质量 spec 的场合。
 
+### weekly-report-ppt
+
+**场景**：根据工作记录自动提炼并生成结构精美、节奏合理的周报 PPT 大纲。
+
+- **编辑风 (warm-editorial)**：视觉精髓为暖奶油底、墨黑文字与极克制的珊瑚强调色。Regular 字重的衬线页标题与无衬线正文的双轨混排。
+- **节奏交替 (surface-rhythm)**：页面在“奶油画布、内容卡片、深色表面”三种模式间交替过渡。若 PPT 总页数超 5 页，必须在中间插入过渡节奏页，且尾页使用深色表面收尾。
+- **代码考古 (git-archaeology)**：当用户输入记录过于简短时，可获得授权后扫描最近 7 天的个人 Git 提交记录及本周代码变动，智能挖掘并扩写技术细节。
+
 ## 安装
 
 ### 方式一：通过 `npx skills` 安装（OpenCode / Codex / Cursor 等）
@@ -110,6 +118,14 @@ claude plugin install aohan-skills@aohan-skills-marketplace
 /ral-review docs/specs/payment-system.md quick
 ```
 
+**weekly-report-ppt**
+
+直接提供本周的简要工作记录，或者在输入极简时授权 Agent 扫描 Git 提交记录：
+
+```
+这是我本周的简要工作记录：重构了商户端提现状态机，修复了两个bug。帮我做成周报 PPT 大纲。
+```
+
 ## 项目结构
 
 ```
@@ -120,8 +136,12 @@ aohan-skills/
 ├── skills/
 │   ├── whole-codebase-search/
 │   │   └── SKILL.md
-│   └── ral-review/
+│   ├── ral-review/
+│   │   ├── SKILL.md
+│   │   └── references/
+│   └── weekly-report-ppt/
 │       ├── SKILL.md
+│       ├── examples/
 │       └── references/
 ├── README.md
 └── LICENSE
