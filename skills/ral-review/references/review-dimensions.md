@@ -2,80 +2,38 @@
 
 ## Round-Agent Matrix
 
-Each agent participates in all rounds but adjusts focus per the matrix below.
+Each agent participates in all rounds. "Primary" marks the agent whose expertise
+aligns with this round's dimension; others contribute from their perspective.
 
 | Round | Dimension | Agent A (Architect) | Agent B (Engineer) | Agent C (QA) | Agent D (Devil's Advocate) |
 |-------|-----------|---------------------|-------------------|--------------|---------------------------|
-| R1 | Requirements | Check requirement-architecture alignment | Assess feasibility of requirements | Validate acceptance criteria completeness | Challenge assumptions in requirements |
-| R2 | Architecture | Primary reviewer | Identify implementation blockers | Check testability of architecture | Attack coupling and dependencies |
-| R3 | Edge Cases | Review system-level failure modes | Assess error handling complexity | Primary reviewer | Challenge error recovery assumptions |
-| R4 | Implementation | Validate architectural integrity | Primary reviewer | Verify test coverage plan | Attack implementation shortcuts |
-| R5 | Future Evolution | Primary reviewer | Assess technical debt | Check maintainability | Challenge extensibility claims |
+| R1 | Requirements | Requirement-architecture alignment | Feasibility of requirements | Acceptance criteria completeness | Challenge assumptions in requirements |
+| R2 | Architecture | **Primary** | Implementation blockers | Testability of architecture | Attack coupling and dependencies |
+| R3 | Edge Cases | System-level failure modes | Error handling complexity | **Primary** | Challenge error recovery assumptions |
+| R4 | Implementation | Architectural integrity | **Primary** | Test coverage plan | Attack implementation shortcuts |
+| R5 | Future Evolution | **Primary** | Technical debt | Maintainability | Challenge extensibility claims |
 
-## Round 1: Requirement Completeness Review
+## R1: Requirement Completeness
 
-Check for:
-- Requirement gaps
-- User scenario gaps
-- Business rule gaps
-- Acceptance criteria gaps
-- Stakeholder alignment
-- Success metrics
+- Requirement gaps, user scenario gaps, business rule gaps
+- Acceptance criteria gaps, stakeholder alignment, success metrics
 
-Output: Issues, Risks, Missing Information
+## R2: Architecture
 
----
+- Module responsibilities, data flow clarity, state management
+- Extensibility design, coupling and dependencies, technology choices
 
-## Round 2: Architecture Review
+## R3: Edge Cases
 
-Check for:
-- Module responsibilities
-- Data flow clarity
-- State management approach
-- Extensibility design
-- Coupling and dependencies
-- Technology choices
+- Exception flows, extreme inputs, concurrency issues
+- Failure handling, boundary conditions, error recovery
 
-Output: Architecture Issues, Architecture Risks, Refactoring Suggestions
+## R4: Implementation
 
----
+- Implementation complexity, development cost, technical difficulty
+- Timeline feasibility, unreasonable design, blockers
 
-## Round 3: Edge Case Review
+## R5: Future Evolution
 
-Check for:
-- Exception flows
-- Extreme inputs
-- Concurrency issues
-- Failure handling
-- Boundary conditions
-- Error recovery
-
-Output: Edge Case Issues, Failure Scenarios, Recovery Mechanisms
-
----
-
-## Round 4: Implementation Review
-
-Check for:
-- Implementation complexity
-- Development cost estimate
-- Technical difficulty
-- Timeline feasibility
-- Unreasonable design
-- Blockers and dependencies
-
-Output: Implementation Issues, Complexity Concerns, Technical Risks
-
----
-
-## Round 5: Future Evolution Review
-
-Check for:
-- Long-term maintainability
-- Plugin/extension capability
-- Scalability path
-- Technical debt risk
-- Migration strategy
-- Backward compatibility
-
-Output: Evolution Issues, Extensibility Gaps, Maintenance Risks
+- Long-term maintainability, plugin/extension capability, scalability path
+- Technical debt risk, migration strategy, backward compatibility
